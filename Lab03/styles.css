@@ -1,0 +1,59 @@
+h1 {
+    color:#0000ffb1
+}
+h1:first-letter{
+    font-size: 75px;
+}
+a[href $=".pk/"]
+{color: rgb(20, 210, 106)
+}
+
+
+
+.heading {
+    color: darkblue;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    
+}
+
+.picture {
+    border: 5px solid #444444;
+    border-radius: 10px;
+;
+    
+}
+
+
+h2 + ul li {
+    color: darkgreen;
+    font-style: italic;
+}
+
+dl dt h4 {
+    color: maroon;
+    font-weight: bold;
+}
+
+footer a {
+    color: white;
+    background-color: navy;
+    
+    
+    
+}
+
+footer a:hover {
+    background-color:yellow;
+}
+
+
+
+body {
+    background-color: #f2f2f2;
+    
+    font-family: Verdana, sans-serif;
+    
+}
+
+
