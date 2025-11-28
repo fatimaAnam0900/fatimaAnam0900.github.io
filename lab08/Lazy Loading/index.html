@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Vertical Screenshots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .screenshot, .lazy-screenshot {
+            display: block;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto 40px auto; 
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            min-height: 200px; 
+            transition: opacity 1s ease-in;
+        }
+
+        .lazy-screenshot {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lazy Loading Vertical Screenshots</h1>
+
+    <img src="Home.png" alt="Screenshot 1" class="screenshot">
+
+    <img data-src="Book.png" alt="Screenshot 3" class="lazy-screenshot">
+    <img data-src="Trip.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View1.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View2.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View3.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View4.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View5.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View6.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View7.png" alt="Screenshot 4" class="lazy-screenshot">
+    <img data-src="View8.png" alt="Screenshot 4" class="lazy-screenshot">
+
+
+    <script>
+        const lazyImages = document.querySelectorAll('.lazy-screenshot');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src; 
+                    img.onload = () => {
+                        img.style.opacity = "1"; 
+                    };
+                    observer.unobserve(img); 
+                }
+            });
+        }, {
+            rootMargin: "0px 0px 200px 0px"
+        });
+
+        lazyImages.forEach(img => observer.observe(img));
+    </script>
+
+</body>
+</html>

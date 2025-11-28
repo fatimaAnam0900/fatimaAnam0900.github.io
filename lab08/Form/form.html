@@ -3,7 +3,7 @@
 
 <head>
   <title>Fatima Anam</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="form.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -41,7 +41,7 @@
 
    
     <section class="personal-info">
-      <img class="picture" src="WhatsApp Image 2025-09-19 at 5.03.36 PM.jpeg" alt="Profile Picture" width="200px">
+      <img class="picture" src="Profile.jpg" alt="Profile Picture" width="200px">
       <div id="text">
         <dl>
           <dt><h4>Name:</h4></dt>
@@ -74,7 +74,7 @@
         </div>
         <div class="cardborder">
           <h3>Management</h3>
-          <img src="mangement_skill.jpg" alt="management" width="200px">
+          <img src="managementskills_pic.jpg" alt="management" width="200px">
           <p>Management skills involve planning, organizing, and leading effectively to achieve goals efficiently.</p>
         </div>
       </div>
@@ -130,40 +130,43 @@
       </div>
     </section>
 
-    <!-- Contact Form -->
     <section class="form1" id="contact">
-      <h2>Contact Me</h2>
-      <form class="form">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+  <h2>Contact Me</h2>
+  
+  <form class="form" id="myform">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-        <label for="phone">Phone Number:</label><br>
-          id="phone" name="phone"><br><br>
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" id="phone" name="phone" required><br><br>
 
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age" min="0" max="100"><br><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="0" max="100"><br><br>
 
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br><br>
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
 
-        <label>Interests:</label><br>
-        <input type="checkbox" id="reading" name="interest" value="reading">
-        <label for="reading">Reading</label>
-        <input type="checkbox" id="sports" name="interest" value="sports">
-        <label for="sports">Sports</label><br><br>
+    <label>Interests:</label><br>
+    <input type="checkbox" id="reading" name="interest" value="reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="sports" name="interest" value="sports">
+    <label for="sports">Sports</label><br><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
 
-        <input type="submit" value="Submit">
-      </form>
-    </section>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="msg" style="font-weight:bold; text-align:center;"></p>
+
+</section>
 
 
     <footer class="footer">
@@ -171,6 +174,9 @@
       <a href="tel:123456789">Phone Number</a>
     </footer>
 
+
   </div>
+  <script src="form.js"></script>
+
 </body>
 </html>
